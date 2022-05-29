@@ -53,6 +53,7 @@ class Overworld extends Phaser.Scene {
 
         this.physics.world.on('worldbounds', (body, blockedUp, blockedDown, blockedLeft, blockedRight) => {
             if (blockedUp) {
+                this.cameras.main.flash(250);
                 this.cameras.main.pan(
                     this.ROOMWIDTH*1.5,
                     this.ROOMHEIGHT*0.5,
