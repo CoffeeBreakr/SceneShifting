@@ -52,71 +52,71 @@ class Overworld extends Phaser.Scene {
             this.ROOMWIDTH+this.player.displayWidth, this.ROOMHEIGHT+this.player.displayHeight/2);
 
             this.physics.world.on('worldbounds', (body, blockedUp, blockedDown, blockedLeft, blockedRight) => {
-                if (blockedUp) {
-                    console.log("Reached an Edge");
-                    console.log(1.5 * this.ROOMHEIGHT);
-                    console.log(2.5 * this.ROOMWIDTH);
-                    this.cameras.main.pan(
-                        1.5 * this.ROOMWIDTH,
-                        0.5 * this.ROOMHEIGHT,
-                        900,
-                        'Cubic.easeOut'
-                    );
-                    this.physics.world.setBounds(this.ROOMWIDTH-this.player.displayWidth/2, 0, 
-                        this.ROOMWIDTH+this.player.displayWidth, this.ROOMHEIGHT+this.player.displayHeight/2);
-                } else if (blockedDown) {
-                    console.log("Reached an Edge");
-                    console.log(1.5 * this.ROOMHEIGHT);
-                    console.log(2.5 * this.ROOMWIDTH);
-                    this.cameras.main.pan(
-                        1.5 * this.ROOMWIDTH,
-                        1.5*  this.ROOMHEIGHT,
-                        900,
-                        'Cubic.easeOut'
-                    );
-                    this.physics.world.setBounds(this.ROOMWIDTH-this.player.displayWidth/2, this.ROOMHEIGHT-this.player.displayHeight/2,
-                        this.ROOMWIDTH+this.player.displayWidth, this.ROOMHEIGHT+this.player.displayHeight/2);
-                }
-                else if (blockedLeft) {
-                    console.log("Reached an Edge");
-                    console.log(1.5 * this.ROOMHEIGHT);
-                    console.log(2.5 * this.ROOMWIDTH);
-                    this.cameras.main.pan(
-                        0 * this.ROOMWIDTH,
-                        1.5 *  this.ROOMHEIGHT,
-                        900,
-                        'Cubic.easeOut'
-                    );
-                    this.physics.world.setBounds(0, this.ROOMHEIGHT-this.player.displayHeight/2,
-                        this.ROOMWIDTH+this.player.displayWidth, this.ROOMHEIGHT+this.player.displayHeight/2);
-                }
-                else if (blockedRight) {
-                    console.log("Reached an Edge");
-                    console.log(1.5 * this.ROOMHEIGHT);
-                    console.log(2.5 * this.ROOMWIDTH);
-                    this.cameras.main.pan(
-                       2.5 * this.ROOMWIDTH,
-                       1.5 * this.ROOMHEIGHT,
-                        900,
-                        'Cubic.easeOut'
-                    );
-                    this.physics.world.setBounds(2*this.ROOMWIDTH-this.player.displayWidth/2, this.ROOMHEIGHT-this.player.displayHeight/2,
-                        this.ROOMWIDTH+this.player.displayWidth, this.ROOMHEIGHT+this.player.displayHeight/2);
-                }
-                else if (blockedRight) {
-                    console.log("Reached an Edge")
-                    console.log(1.5 * this.ROOMHEIGHT);
-                    console.log(2.5 * this.ROOMWIDTH);;
-                    this.cameras.main.pan(
-                       2.5 * this.ROOMWIDTH,
-                       1.5 * this.ROOMHEIGHT,
-                        900,
-                        'Cubic.easeOut'
-                    );
-                    this.physics.world.setBounds(2*this.ROOMWIDTH-this.player.displayWidth/2, this.ROOMHEIGHT-this.player.displayHeight/2,
-                        this.ROOMWIDTH+this.player.displayWidth, this.ROOMHEIGHT+this.player.displayHeight/2);
-                }
-            });
+            if (blockedUp) {
+                console.log("Reached an Edge");
+                console.log(1.5 * this.ROOMHEIGHT);
+                console.log(2.5 * this.ROOMWIDTH);
+                this.cameras.main.pan(
+                    1.5 * this.ROOMWIDTH,
+                    0.5 * this.ROOMHEIGHT,
+                    900,
+                    'Cubic.easeOut'
+                );
+                this.physics.world.setBounds(this.ROOMWIDTH-this.player.displayWidth/2, 0, 
+                    this.ROOMWIDTH+this.player.displayWidth, this.ROOMHEIGHT+this.player.displayHeight/2);
+            } else if (blockedDown) {
+                console.log("Reached an Edge");
+                console.log(1.5 * this.ROOMHEIGHT);
+                console.log(2.5 * this.ROOMWIDTH);
+                this.cameras.main.pan(
+                    1.5 * this.ROOMWIDTH,
+                    1.5 * this.ROOMHEIGHT,
+                    900,
+                    'Cubic.easeOut'
+                );
+                this.physics.world.setBounds(this.ROOMWIDTH-this.player.displayWidth/2, this.ROOMHEIGHT-this.player.displayHeight/2,
+                    this.ROOMWIDTH+this.player.displayWidth, this.ROOMHEIGHT+this.player.displayHeight/2);
+            }
+            else if (blockedLeft) {
+                console.log("Reached an Edge");
+                console.log(1.5 * this.ROOMHEIGHT);
+                console.log(2.5 * this.ROOMWIDTH);
+                this.cameras.main.pan(
+                    0 * this.ROOMWIDTH,
+                    1.5 *  this.ROOMHEIGHT,
+                    900,
+                    'Cubic.easeOut'
+                );
+                this.physics.world.setBounds(0, this.ROOMHEIGHT-this.player.displayHeight/2,
+                    this.ROOMWIDTH+this.player.displayWidth, this.ROOMHEIGHT+this.player.displayHeight/2);
+            }
+            else if (blockedRight) {
+                console.log("Reached an Edge");
+                console.log(1.5 * this.ROOMHEIGHT);
+                console.log(2.5 * this.ROOMWIDTH);
+                this.cameras.main.pan(
+                   2.5 * this.ROOMWIDTH,
+                   1.5 * this.ROOMHEIGHT,
+                    900,
+                    'Cubic.easeOut'
+                );
+                this.physics.world.setBounds(2*this.ROOMWIDTH-this.player.displayWidth/2, this.ROOMHEIGHT-this.player.displayHeight/2,
+                    this.ROOMWIDTH+this.player.displayWidth, this.ROOMHEIGHT+this.player.displayHeight/2);
+            }
+            else if (blockedRight) {
+                console.log("Reached an Edge")
+                console.log(1.5 * this.ROOMHEIGHT);
+                console.log(2.5 * this.ROOMWIDTH);;
+                this.cameras.main.pan(
+                   2.5 * this.ROOMWIDTH,
+                   1.5 * this.ROOMHEIGHT,
+                    900,
+                    'Cubic.easeOut'
+                );
+                this.physics.world.setBounds(2*this.ROOMWIDTH-this.player.displayWidth/2, this.ROOMHEIGHT-this.player.displayHeight/2,
+                    this.ROOMWIDTH+this.player.displayWidth, this.ROOMHEIGHT+this.player.displayHeight/2);
+            }
+        });
 
         // Use Phaser-provided cursor key creation function
         cursors = this.input.keyboard.createCursorKeys();
