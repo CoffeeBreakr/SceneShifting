@@ -62,6 +62,8 @@ class Overworld extends Phaser.Scene {
                     900,
                     'Cubic.easeOut'
                 );
+                this.cameras.main.flash(250);
+                this.cameras.main.shake(250);
                 this.physics.world.setBounds(this.ROOMWIDTH-this.player.displayWidth/2, 0, 
                     this.ROOMWIDTH+this.player.displayWidth, this.ROOMHEIGHT+this.player.displayHeight/2);
             } else if (blockedDown) {
@@ -74,6 +76,8 @@ class Overworld extends Phaser.Scene {
                     900,
                     'Cubic.easeOut'
                 );
+                this.cameras.main.flash(250);
+                this.cameras.main.shake(250);
                 this.physics.world.setBounds(this.ROOMWIDTH-this.player.displayWidth/2, this.ROOMHEIGHT-this.player.displayHeight/2,
                     this.ROOMWIDTH+this.player.displayWidth, this.ROOMHEIGHT+this.player.displayHeight/2);
             }
@@ -87,6 +91,8 @@ class Overworld extends Phaser.Scene {
                     900,
                     'Cubic.easeOut'
                 );
+                this.cameras.main.flash(250);
+                this.cameras.main.shake(250);
                 this.physics.world.setBounds(0, this.ROOMHEIGHT-this.player.displayHeight/2,
                     this.ROOMWIDTH+this.player.displayWidth, this.ROOMHEIGHT+this.player.displayHeight/2);
             }
@@ -100,6 +106,8 @@ class Overworld extends Phaser.Scene {
                     900,
                     'Cubic.easeOut'
                 );
+                this.cameras.main.flash(250);
+                this.cameras.main.shake(250);
                 this.physics.world.setBounds(2*this.ROOMWIDTH-this.player.displayWidth/2, this.ROOMHEIGHT-this.player.displayHeight/2,
                     this.ROOMWIDTH+this.player.displayWidth, this.ROOMHEIGHT+this.player.displayHeight/2);
             }
@@ -113,6 +121,8 @@ class Overworld extends Phaser.Scene {
                     900,
                     'Cubic.easeOut'
                 );
+                this.cameras.main.flash(250);
+                this.cameras.main.shake(250);
                 this.physics.world.setBounds(2*this.ROOMWIDTH-this.player.displayWidth/2, this.ROOMHEIGHT-this.player.displayHeight/2,
                     this.ROOMWIDTH+this.player.displayWidth, this.ROOMHEIGHT+this.player.displayHeight/2);
             }
